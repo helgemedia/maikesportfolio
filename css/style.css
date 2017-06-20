@@ -21,5 +21,30 @@ html, body {
 }
 
 .logo {
-  width: 10em;
+  width: 8em;
+  transform: translateY(-80%);
+}
+
+.animated {
+  animation-name: menumove;
+  animation-duration: 2s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+.animatedlogo {
+  animation-name: logomove;
+  animation-duration: 2s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+@keyframes menumove {
+    0%   {}
+    100% {left:0; top:0; height: 20%}
+}
+
+@keyframes logomove {
+  0%   {}
+  100% {width: 5em; transform: translateY(0)}
 }
