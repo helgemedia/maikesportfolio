@@ -15,9 +15,22 @@ html, body {
   height: 100%;
   width: 100%;
 
+  z-index: 300;
+
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.logobox {
+  height: 100%;
+  width: 90%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  z-index: 301;
 }
 
 .logo {
@@ -25,8 +38,41 @@ html, body {
   transform: translateY(-80%);
 }
 
+.menubox {
+  position: fixed;
+  width: 100%;
+  height: 20%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  z-index: 400;
+}
+.menu {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  height: 100%;
+  width: 80%;
+
+  z-index: 401;
+}
+
+.menu a {
+  display: none;
+  text-decoration: none;
+  color: black;
+  z-index: 402;
+}
+
+.aboutlink {
+  flex-basis: 52%;
+}
+
 .animated {
-  animation-name: menumove;
+  animation-name: backgroundmove;
   animation-duration: 2s;
   animation-iteration-count: 1;
   animation-fill-mode: forwards;
@@ -39,12 +85,31 @@ html, body {
   animation-fill-mode: forwards;
 }
 
-@keyframes menumove {
-    0%   {}
-    100% {left:0; top:0; height: 20%}
+@keyframes backgroundmove {
+  0%   {}
+  100% {left: 0; top: 0; height: 20%}
 }
 
 @keyframes logomove {
   0%   {}
   100% {width: 5em; transform: translateY(0)}
+}
+
+.content {
+  box-sizing: border-box;
+  z-index: -200;
+
+  position: fixed;
+  bottom: 0;
+  left: 0;
+
+  width: 100%;
+  height: 80%;
+
+  opacity: 0;
+}
+
+.content.visible {
+  z-index: 200;
+  opacity: 1;
 }
