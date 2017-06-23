@@ -73,10 +73,65 @@ html, body {
   z-index: 402;
 }
 
-/* Responsive Menu */
 .aboutlink {
   flex-basis: 52%;
 }
+
+/* Responsive Menu */
+
+.menuresponsive {
+  display: none;
+  position: absolute;
+  width: 200px;
+  height: auto;
+  top: 50px;
+  right: 2px;
+  background-color: rgb(103, 117, 123);
+  background-color: rgba(103, 117, 123, 0.92);
+  padding: 20px 10px;
+  z-index: 1000;
+}
+
+.menuresponsive a {
+  display: block;
+  text-align: left;
+  color: #FFFFFF;
+  padding: 20px;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.icon {
+  display: none;
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  color: #000000;
+  text-align: center;
+  padding: 2px;
+  text-decoration: none;
+  font-size: 26px;
+}
+
+@media screen and (max-width: 750px) {
+  .menu {
+    display: none;
+  }
+  .icon {
+    display: block;
+  }
+  .icon.responsive {
+    color: #67757B;
+  }
+  .menuresponsive.responsive {
+    display: block;
+  }
+  .menuresponsive.responsive a:hover {
+    background-color: #3c474d;
+  }
+}
+
+/* Animations */
 
 .animated {
   animation-name: backgroundmove;
@@ -137,6 +192,28 @@ html, body {
   max-width: 800px;
   padding: 10px;
 }
+
+/* Portfolio Styling */
+
+.portfoliobox {
+  width: 100%;
+}
+
+.grid-sizer,
+.grid-item {
+  width: 33%;
+}
+
+.grid-item img {
+  width: 100%;
+
+  box-sizing: border-box;
+  padding: 4px;
+}
+
+/* About Styling */
+
+
 
 /* Kontakt Styling */
 

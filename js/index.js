@@ -16,7 +16,7 @@ $('document').ready(function() {
 
   // Trigger App on page load, after background has loaded to hide ugliness
   var checkdiv = $('.background'),
-  bg = checkdiv.css('background-image');
+    bg = checkdiv.css('background-image');
   if (bg) {
     var src = bg.replace(/(^url\()|(\)$|[\"\'])/g, ''),
       $img = $('<img>').attr('src', src).on('load', function() {
@@ -65,7 +65,31 @@ $('document').ready(function() {
       $('.errorpage').addClass('visible');
     }
   }
+
+  // Masonry Initialization
+  $('.grid').masonry({
+    // options
+    itemSelector: '.grid-item',
+    columnWidth: '.grid-sizer',
+    percentPosition: true
+  });
+  $('.grid').imagesLoaded().progress(function() {
+    $('.grid').masonry('layout');
+  });
 });
+
+/* Toggle between adding and removing the "responsive" class to #mainmenu on click */
+function respMenu() {
+    var x = document.getElementById("mobilemenu");
+    var y = document.getElementById("button1");
+    if (x.className === "menuresponsive") {
+        x.className += " responsive";
+        y.className += " responsive";
+    } else {
+        x.className = "menuresponsive";
+        y.className = "icon";
+    }
+}
 
 //Email Adress Anti-Spam var
 
