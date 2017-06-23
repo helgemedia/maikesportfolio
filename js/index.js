@@ -66,3 +66,8 @@ $('document').ready(function() {
     }
   }
 });
+
+//Email Adress Anti-Spam var
+
+var first = "maike";
+var last = "iammai.de";
