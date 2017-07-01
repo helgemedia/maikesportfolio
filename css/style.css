@@ -197,6 +197,7 @@ html, body {
 
 .portfoliobox {
   width: 100%;
+  max-width: 90%;
 }
 
 .grid-sizer,
@@ -204,11 +205,22 @@ html, body {
   width: 33%;
 }
 
+.grid-item--width2 {
+  width: 66%;
+}
+
 .grid-item img {
   width: 100%;
 
   box-sizing: border-box;
   padding: 4px;
+}
+
+@media screen and (max-width: 750px) {
+  .grid-sizer,
+  .grid-item {
+    width: 100%;
+  }
 }
 
 /* About Styling */
