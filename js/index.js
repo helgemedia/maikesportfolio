@@ -55,45 +55,29 @@ $('document').ready(function() {
         $('.impressum').addClass('visible');
       },
 
-      //1
+      //6
       '#Fidena': function() {
         $('.fidena').addClass('visible');
       },
-      //2
-      '#DAV': function() {
-        $('.dav').addClass('visible');
-      },
-      //3
-      '#Oszillation': function() {
-        $('.oszillation').addClass('visible');
-      },
-      //4
-      '#Siebdruck': function() {
-        $('.siebdruck').addClass('visible');
-      },
       //5
-      '#Poster': function() {
-        $('.poster').addClass('visible');
-      },
-      //6
-      '#Illustration': function() {
-        $('.illustration').addClass('visible');
-      },
-      //7
-      '#Magaloge': function() {
-        $('.magaloge').addClass('visible');
-      },
-      //8
-      '#Orderbook': function() {
-        $('.orderbook').addClass('visible');
-      },
-      //9
       '#Radierung': function() {
         $('.radierung').addClass('visible');
       },
-      //10
-      '#nix': function() {
-        $('.nix').addClass('visible');
+      //4
+      '#Oszillation': function() {
+        $('.oszillation').addClass('visible');
+      },
+      //3
+      '#Siebdruck': function() {
+        $('.siebdruck').addClass('visible');
+      },
+      //2
+      '#Poster': function() {
+        $('.poster').addClass('visible');
+      },
+      //1
+      '#DAV': function() {
+        $('.dav').addClass('visible');
       }
     };
 
