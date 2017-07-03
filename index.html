@@ -30,11 +30,15 @@
   <!-- Stylesheet -->
   <link href="css/style.css" type="text/css" rel="stylesheet">
   <!-- Font Integration -->
-
+  <link href="./fonts/HalisGR-Regular/fonts.css" rel="stylesheet">
+  <link href="./fonts/HalisGR-Medium/fonts.css" rel="stylesheet">
   <!-- JQuery Integration -->
   <script src="js/http_code.jquery.com_jquery-latest.js"></script>
   <!-- Viewport Setup -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Slick Image Slider -->
+  <link rel="stylesheet" type="text/css" href="./slick/slick.css" />
+  <link rel="stylesheet" type="text/css" href="./slick/slick-theme.css" />
   <!-- Google Analytics Tracking -->
   <script>
     (function(i, s, o, g, r, a, m) {
@@ -120,17 +124,33 @@
   <!-- 6 -->
 
   <div class="content fidena">
-    <div class="contentbox">
-      <p>
-        Fidena
-      </p>
+    <div class="contentbox projectbox">
+      <div class="textbox">
+        <h3>
+          Fidena Marlena
+        </h3>
+        <p>
+          Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolore
+        </p>
+      </div>
+      <div class="picturebox">
+        <div>
+          <img src="./images/Hintergrund.png" />
+        </div>
+        <div>
+          <img src="./images/Hintergrund.png" />
+        </div>
+        <div>
+          <img src="./images/Hintergrund.png" />
+        </div>
+      </div>
     </div>
   </div>
 
   <!-- 5 -->
 
   <div class="content radierung">
-    <div class="contentbox">
+    <div class="contentbox projectbox">
       <p>
         Radierung
       </p>
@@ -140,7 +160,7 @@
   <!-- 4 -->
 
   <div class="content oszillation">
-    <div class="contentbox">
+    <div class="contentbox projectbox">
       <p>
         Oszillation
       </p>
@@ -150,7 +170,7 @@
   <!-- 3 -->
 
   <div class="content siebdruck">
-    <div class="contentbox">
+    <div class="contentbox projectbox">
       <p>
         siebdruck
       </p>
@@ -160,7 +180,7 @@
   <!-- 2 -->
 
   <div class="content poster">
-    <div class="contentbox">
+    <div class="contentbox projectbox">
       <p>
         poster
       </p>
@@ -170,7 +190,7 @@
   <!-- 1 -->
 
   <div class="content dav">
-    <div class="contentbox">
+    <div class="contentbox projectbox">
       <p>
         dav
       </p>
@@ -187,7 +207,11 @@
 
   <div class="content kontakt">
     <div class="contentbox">
-      <div class="contactdata divinner">
+      <div class="contactdata divinner" id="contactd">
+        <h2>Like my style?</h2>
+        <p>
+          Melde dich bei mir!<br><br>
+        </p>
         Maike Weckenbrock<br> Neustraße 13<br> 44787 Bochum<br>
         <br> E-Mail:
         <script type="text/javascript">
@@ -196,7 +220,7 @@
         <noscript>
                   Bitte Javascript aktivieren!.
               </noscript>
-        <br>Telefon: ???
+        <br> Tel: 0176 / 703 623 30
       </div>
       <div class="contactformular divinner" id="contactf">
         <script type="text/javascript" src="./js/ajaxform.js"></script>
@@ -219,7 +243,7 @@
         </form>
         <div class="fadein" id="popup1">
           <div class="fadecenter">
-            <p>&#x2713 Danke, wir kümmern uns drum!</p>
+            <p>&#x2713 Danke, ich melde mich!</p>
           </div>
         </div>
         <div class="fadein" id="popup2">
@@ -308,6 +332,8 @@
   <div class="content errorpage">
     Error
   </div>
+  <!-- Slick Image Slider JS -->
+  <script type="text/javascript" src="slick/slick.min.js"></script>
 </body>
 
 </html>

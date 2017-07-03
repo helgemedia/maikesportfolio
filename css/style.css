@@ -72,6 +72,9 @@ html, body {
   text-decoration: none;
   color: black;
   z-index: 402;
+
+  font-family: "HalisGR-Medium", sans-serif;
+  font-size: 0.9em;
 }
 
 .space {
@@ -87,10 +90,13 @@ html, body {
   height: auto;
   top: 50px;
   right: 2px;
-  background-color: rgb(103, 117, 123);
-  background-color: rgba(103, 117, 123, 0.92);
+  background-color: rgb(103, 121, 109);
+  background-color: rgba(103, 121, 109, 0.92);
   padding: 20px 10px;
   z-index: 1000;
+
+  font-family: "HalisGR-Medium", sans-serif;
+  font-size: 0.9em;
 }
 
 .menuresponsive a {
@@ -158,6 +164,8 @@ html, body {
   100% {width: 5em; transform: translateY(0)}
 }
 
+/* Container Styling */
+
 .content {
   box-sizing: border-box;
   z-index: -200;
@@ -190,15 +198,53 @@ html, body {
 .contentbox {
   box-sizing: border-box;
   height: 100%;
+  width: 100%;
   max-width: 800px;
   padding: 10px;
 }
 
+.projectbox {
+  max-width: 1000px;
+  padding: 20px;
+}
+
+.textbox {
+  float: left;
+  box-sizing: border-box;
+  width: 30%;
+  padding: 0 20px 0 20px;
+  font-size: 0.9em;
+  font-family: "HalisGR-Regular", sans-serif;
+}
+
+.textbox h3 {
+  padding-top: 0;
+  margin-top: 0;
+}
+
+.picturebox {
+  float: left;
+  width: 70%;
+}
+
+.picturebox img {
+  width: 100%;
+}
+
+@media screen and (max-width: 750px) {
+  .textbox {
+    width: 100%;
+    padding: 0;
+  }
+  .picturebox {
+    width: 100%;
+  }
+}
 /* Portfolio Styling */
 
 .portfoliobox {
   width: 100%;
-  max-width: 90%;
+  max-width: 1000px;
 }
 
 .grid-sizer,
@@ -263,13 +309,20 @@ html, body {
 }
 
 #contactd {
-  font-size: 14px;
-  margin-top: 32px;
+  font-family: "HalisGR-Regular", sans-serif;
+  font-size: 1em;
+  margin-top: 18px;
   text-align: left;
 }
 
+@media screen and (max-width: 750px) {
+  #contactd {
+    margin-top: 0;
+  }
+}
+
 #contactd a {
-  color: #67757B;
+  color: #67796D;
   text-decoration: none;
 }
 
@@ -278,8 +331,8 @@ html, body {
 }
 
 .inputs {
-  background-color: #67757B;
-  color: #FFFFFF;
+  background-color: #CCC8BD;
+  color: black;
   outline: none;
   border: 3px solid rgb(204, 204, 204);
   border: 3px solid rgba(204, 204, 204, 0);
@@ -345,24 +398,24 @@ html, body {
 
 ::-webkit-input-placeholder {
   /* WebKit, Blink, Edge */
-  color: #FFFFFF;
+  color: #000000;
 }
 
 :-moz-placeholder {
   /* Mozilla Firefox 4 to 18 */
-  color: #FFFFFF;
+  color: #000000;
   opacity: 1;
 }
 
 ::-moz-placeholder {
   /* Mozilla Firefox 19+ */
-  color: #FFFFFF;
+  color: #000000;
   opacity: 1;
 }
 
 :-ms-input-placeholder {
   /* Internet Explorer 10-11 */
-  color: #FFFFFF;
+  color: #000000;
 }
 
 #sendbutton {
@@ -370,7 +423,7 @@ html, body {
   -moz-appearance: none;
   height: 40px;
   width: 100%;
-  background-color: #e5c334;
+  background-color: #67796D;
   color: white;
   padding: 14px 20px;
   border: none;
@@ -380,7 +433,7 @@ html, body {
 }
 
 #sendbutton:hover {
-  background-color: #e6a829;
+  background-color: #59665D;
 }
 
 /* Impressum Styling */
@@ -389,4 +442,8 @@ html, body {
   display: inline;
   width: 20px;
   transform: translateY(28%);
+}
+
+.impressum {
+  font-family: "HalisGR-Regular", sans-serif;
 }

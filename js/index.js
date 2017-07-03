@@ -101,19 +101,27 @@ $('document').ready(function() {
   $('.grid').imagesLoaded().progress(function() {
     $('.grid').masonry('layout');
   });
+
+  // Slick Image Slider Initialization
+  $(".picturebox").slick({
+    dots: true,
+    arrows: false,
+    adaptiveHeight: true,
+    fade: true
+  });
 });
 
 /* Toggle between adding and removing the "responsive" class to #mainmenu on click */
 function respMenu() {
-    var x = document.getElementById("mobilemenu");
-    var y = document.getElementById("button1");
-    if (x.className === "menuresponsive") {
-        x.className += " responsive";
-        y.className += " responsive";
-    } else {
-        x.className = "menuresponsive";
-        y.className = "icon";
-    }
+  var x = document.getElementById("mobilemenu");
+  var y = document.getElementById("button1");
+  if (x.className === "menuresponsive") {
+    x.className += " responsive";
+    y.className += " responsive";
+  } else {
+    x.className = "menuresponsive";
+    y.className = "icon";
+  }
 }
 
 //Email Adress Anti-Spam var
