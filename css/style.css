@@ -222,6 +222,11 @@ html, body {
   margin-top: 0;
 }
 
+.textbox a {
+  color: #67796D;
+  text-decoration: none;
+}
+
 .picturebox {
   float: left;
   width: 70%;

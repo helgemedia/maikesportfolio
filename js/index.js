@@ -109,6 +109,31 @@ $('document').ready(function() {
     adaptiveHeight: true,
     fade: true
   });
+
+  $('.p-one').on('click', function() {
+    $('.p-one').slick('slickNext');
+  });
+
+  $('.p-two').on('click', function() {
+    $('.p-two').slick('slickNext');
+  });
+
+  $('.p-three').on('click', function() {
+    $('.p-three').slick('slickNext');
+  });
+
+  $('.p-four').on('click', function() {
+    $('.p-four').slick('slickNext');
+  });
+
+  $('.p-five').on('click', function() {
+    $('.p-five').slick('slickNext');
+  });
+
+  $('.p-six').on('click', function() {
+    $('.p-six').slick('slickNext');
+  });
+
 });
 
 /* Toggle between adding and removing the "responsive" class to #mainmenu on click */
