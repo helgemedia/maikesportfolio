@@ -72,8 +72,8 @@ $('document').ready(function() {
         $('.siebdruck').addClass('visible');
       },
       //2
-      '#Poster': function() {
-        $('.poster').addClass('visible');
+      '#Titus': function() {
+        $('.titus').addClass('visible');
       },
       //1
       '#DAV': function() {
