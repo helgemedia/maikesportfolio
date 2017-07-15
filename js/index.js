@@ -1,9 +1,10 @@
 $('document').ready(function() {
 
   // Logo and Background Animation
-  $('.logo, .background, .menubox').on('click', function() {
-    $('.background').addClass("animated");
-    $('.logo').addClass("animatedlogo");
+  $('.logo, .logobox, .background, .menubox').on('click', function() {
+    $('.background').addClass('animated');
+    $('.logobox').addClass('animatedlogo');
+    $('.logo').addClass('animatedlogowidth');
     $('.menu a').fadeIn(3000);
   });
 

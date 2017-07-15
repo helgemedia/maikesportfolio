@@ -24,22 +24,28 @@ html, body {
 
 .logobox {
   height: 100%;
-  width: 90%;
+  width: 100%;
+
+  position: fixed;
 
   display: flex;
   align-items: center;
   justify-content: center;
 
-  z-index: 301;
+  z-index: 402;
+
+  pointer-events: none;
 }
 
 .logo {
   width: 8em;
   transform: translateY(-80%);
+
+  pointer-events: all;
 }
 
 .logo img {
-  z-index: 403
+  z-index: 403;
 }
 
 /* Wide Menu */
@@ -154,14 +160,26 @@ html, body {
   animation-fill-mode: forwards;
 }
 
+.animatedlogowidth {
+  animation-name: logoscale;
+  animation-duration: 2s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
 @keyframes backgroundmove {
   0%   {}
-  100% {left: 0; top: 0; height: 20%}
+  100% {transform: translateY(-80%)}
 }
 
 @keyframes logomove {
   0%   {}
-  100% {width: 5em; transform: translateY(0)}
+  100% {transform: translateY(-40%)}
+}
+
+@keyframes logoscale {
+  0% {}
+  100% {transform: scaleX(0.7) scaleY(0.7)}
 }
 
 /* Container Styling */
@@ -184,6 +202,7 @@ html, body {
   -o-transition: opacity 0.5s;
 
   overflow: scroll;
+  -webkit-overflow-scrolling: touch;
 
   display: flex;
   align-items: center;
