@@ -4,7 +4,7 @@ html, body {
 }
 
 .background {
-  background: url(../images/Hintergrund@2x.png) no-repeat center center fixed;
+  background: url(../images/Hintergrund@2x.jpg) no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -233,7 +233,8 @@ html, body {
 }
 
 .picturebox img {
-  width: 100%;
+  max-width: 100%;
+  max-height: 70vh;
 }
 
 @media screen and (max-width: 750px) {
