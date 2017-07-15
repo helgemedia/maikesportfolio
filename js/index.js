@@ -6,6 +6,7 @@ $('document').ready(function() {
     $('.logobox').addClass('animatedlogo');
     $('.logo').addClass('animatedlogowidth');
     $('.menu a').fadeIn(3000);
+    $('.icon').fadeIn(3000);
   });
 
   // Single Page Routing based on Hash-Changes

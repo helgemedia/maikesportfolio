@@ -9,14 +9,10 @@ html, body {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-
   position: fixed;
-
   height: 100%;
   width: 100%;
-
   z-index: 300;
-
   display: flex;
   align-items: center;
   justify-content: center;
@@ -25,24 +21,18 @@ html, body {
 .logobox {
   height: 100%;
   width: 100%;
-
   position: fixed;
-
   display: flex;
   align-items: center;
   justify-content: center;
-
   z-index: 402;
-
   pointer-events: none;
 }
 
 .logo {
   width: 8em;
   transform: translateY(-80%);
-
   pointer-events: all;
-
   z-index: 403
 }
 
@@ -54,28 +44,26 @@ html, body {
   z-index: 403;
 }
 
+
 /* Wide Menu */
 
 .menubox {
   position: fixed;
   width: 100%;
   height: 20%;
-
   display: flex;
   align-items: center;
   justify-content: center;
-
   z-index: 400;
 }
+
 .menu {
   display: flex;
   align-items: center;
   justify-content: space-between;
-
   height: 100%;
   width: 80%;
   max-width: 1600px;
-
   z-index: 401;
 }
 
@@ -84,7 +72,6 @@ html, body {
   text-decoration: none;
   color: black;
   z-index: 402;
-
   font-family: "HalisGR-Medium", sans-serif;
   font-size: 0.9em;
 }
@@ -92,6 +79,7 @@ html, body {
 .space {
   width: 100px;
 }
+
 
 /* Responsive Menu */
 
@@ -106,7 +94,6 @@ html, body {
   background-color: rgba(62, 73, 66, 0.92);
   padding: 20px 10px;
   z-index: 900;
-
   font-family: "HalisGR-Medium", sans-serif;
   font-size: 0.9em;
 }
@@ -132,12 +119,19 @@ html, body {
   font-size: 26px;
 }
 
+@media screen and (min-width: 750px) {
+  .icon {
+    opacity: 0;
+    pointer-events: none;
+  }
+}
+
 @media screen and (max-width: 750px) {
   .menu {
     display: none;
   }
   .icon {
-    display: block;
+    display: none;
   }
   .icon.responsive {
     color: #FFFFFF;
@@ -150,6 +144,7 @@ html, body {
     background-color: #3c474d;
   }
 }
+
 
 /* Animations */
 
@@ -175,42 +170,44 @@ html, body {
 }
 
 @keyframes backgroundmove {
-  0%   {}
-  100% {transform: translateY(-80%)}
+  0% {}
+  100% {
+    transform: translateY(-80%)
+  }
 }
 
 @keyframes logomove {
-  0%   {}
-  100% {transform: translateY(-40%)}
+  0% {}
+  100% {
+    transform: translateY(-40%)
+  }
 }
 
 @keyframes logoscale {
   0% {}
-  100% {transform: scaleX(0.7) scaleY(0.7)}
+  100% {
+    transform: scaleX(0.7) scaleY(0.7)
+  }
 }
+
 
 /* Container Styling */
 
 .content {
   box-sizing: border-box;
   z-index: -200;
-
   position: fixed;
   bottom: 0;
   left: 0;
-
   width: 100%;
   height: 80%;
-
   opacity: 0;
   transition: opacity 0.5s;
   -webkit-transition: opacity 0.5s;
   -moz-transition: opacity 0.5s;
   -o-transition: opacity 0.5s;
-
   overflow: scroll;
   -webkit-overflow-scrolling: touch;
-
   display: flex;
   align-items: center;
   justify-content: center;
@@ -272,6 +269,8 @@ html, body {
     width: 100%;
   }
 }
+
+
 /* Portfolio Styling */
 
 .portfoliobox {
@@ -279,8 +278,7 @@ html, body {
   max-width: 1000px;
 }
 
-.grid-sizer,
-.grid-item {
+.grid-sizer, .grid-item {
   width: 33%;
 }
 
@@ -290,21 +288,36 @@ html, body {
 
 .grid-item img {
   width: 100%;
-
   box-sizing: border-box;
   padding: 10px;
 }
 
 @media screen and (max-width: 750px) {
-  .grid-sizer,
-  .grid-item {
+  .grid-sizer, .grid-item {
     width: 100%;
   }
 }
 
+
 /* About Styling */
 
+.maiketext {
+  box-sizing: border-box;
+  font-family: "HalisGR-Regular", sans-serif;
+  font-size: 1em;
+  text-align: left;
+  padding: 10px;
+}
 
+.maiketext h2 {
+  margin: 0;
+}
+
+.maikebild img {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 10px;
+}
 
 /* Kontakt Styling */
 
@@ -323,21 +336,18 @@ html, body {
 }
 
 .ajaxform p {
-
-    -webkit-margin-before: 1em;
-    -webkit-margin-after: 0;
-    -webkit-margin-start: 0;
-    -webkit-margin-end: 0;
-
-    -moz-margin-before: 1em;
-    -moz-margin-after: 0;
-    -moz-margin-start: 0;
-    -moz-margin-end: 0;
-
-    -o-margin-before: 1em;
-    -o-margin-after: 0;
-    -o-margin-start: 0;
-    -o-margin-end: 0;
+  -webkit-margin-before: 1em;
+  -webkit-margin-after: 0;
+  -webkit-margin-start: 0;
+  -webkit-margin-end: 0;
+  -moz-margin-before: 1em;
+  -moz-margin-after: 0;
+  -moz-margin-start: 0;
+  -moz-margin-end: 0;
+  -o-margin-before: 1em;
+  -o-margin-after: 0;
+  -o-margin-start: 0;
+  -o-margin-end: 0;
 }
 
 #contactd {
@@ -398,14 +408,12 @@ html, body {
 .fadein {
   box-sizing: border-box;
   display: none;
-
   position: absolute;
   width: 100%;
   height: 40px;
   bottom: 10px;
   left: 0;
   border-radius: 4px;
-
   z-index: 400;
   padding: 10px;
 }
@@ -467,6 +475,7 @@ html, body {
 #sendbutton:hover {
   background-color: #59665D;
 }
+
 
 /* Impressum Styling */
 
