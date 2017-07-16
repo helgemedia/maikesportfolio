@@ -70,7 +70,7 @@ html, body {
 .menu a {
   display: none;
   text-decoration: none;
-  color: black;
+  color: #FFFCEF;
   z-index: 402;
   font-family: "HalisGR-Medium", sans-serif;
   font-size: 0.9em;
@@ -101,7 +101,7 @@ html, body {
 .menuresponsive a {
   display: block;
   text-align: left;
-  color: #FFFFFF;
+  color: #FFFCEF;
   padding: 20px;
   text-decoration: none;
   font-size: 16px;
@@ -112,7 +112,7 @@ html, body {
   position: fixed;
   top: 30px;
   right: 20px;
-  color: #000000;
+  color: #FFFCEF;
   text-align: center;
   padding: 2px;
   text-decoration: none;
@@ -134,7 +134,7 @@ html, body {
     display: none;
   }
   .icon.responsive {
-    color: #FFFFFF;
+    color: black;
   }
   .menuresponsive.responsive {
     display: block;
