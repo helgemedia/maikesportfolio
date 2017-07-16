@@ -292,6 +292,10 @@ html, body {
   padding: 10px;
 }
 
+.picturebox img {
+  margin: 0 auto;
+}
+
 @media screen and (max-width: 750px) {
   .grid-sizer, .grid-item {
     width: 100%;
