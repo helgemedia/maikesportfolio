@@ -325,6 +325,11 @@ html, body {
   padding: 10px;
 }
 
+.maiketext a {
+  color: #67796D;
+  text-decoration: none;
+}
+
 .maiketext h2 {
   margin: 0;
 }
