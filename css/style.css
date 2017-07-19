@@ -225,6 +225,14 @@ html, body {
   justify-content: center;
 }
 
+.inner {
+  width: 100%;
+  height: calc(100% + 1px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .content.visible {
   z-index: 200;
   opacity: 1;
