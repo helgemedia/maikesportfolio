@@ -57,6 +57,10 @@ $('document').ready(function() {
         $('.impressum').addClass('visible');
       },
 
+      //7
+      '#Tekath': function() {
+        $('.tekath').addClass('visible');
+      },
       //6
       '#Fidena': function() {
         $('.fidena').addClass('visible');
@@ -134,6 +138,10 @@ $('document').ready(function() {
 
   $('.p-six').on('click', function() {
     $('.p-six').slick('slickNext');
+  });
+
+  $('.p-seven').on('click', function() {
+    $('.p-seven').slick('slickNext');
   });
 
 });
