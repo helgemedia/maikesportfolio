@@ -97,17 +97,6 @@ $('document').ready(function() {
     }
   }
 
-  // Masonry Initialization
-  $('.grid').masonry({
-    // options
-    itemSelector: '.grid-item',
-    columnWidth: '.grid-sizer',
-    percentPosition: true
-  });
-  $('.grid').imagesLoaded().progress(function() {
-    $('.grid').masonry('layout');
-  });
-
   // Slick Image Slider Initialization
   $(".picturebox").slick({
     dots: true,
@@ -163,3 +152,17 @@ function respMenu() {
 
 var first = "maike";
 var last = "iammai.de";
+
+// Masonry Initialization
+$('.grid').imagesLoaded( function() {
+  $('.grid').masonry({
+    // options
+    itemSelector: '.grid-item',
+    columnWidth: '.grid-sizer',
+    percentPosition: true
+  });
+});
+
+$(window).load(function(){
+  $('.grid').masonry();
+});

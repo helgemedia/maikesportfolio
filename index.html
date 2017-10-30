@@ -34,6 +34,8 @@
   <link href="./fonts/HalisGR-Medium/fonts.css" rel="stylesheet">
   <!-- JQuery Integration -->
   <script src="js/http_code.jquery.com_jquery-latest.js"></script>
+  <!-- Contentful Integration -->
+  <script src="js/contentful.browser.min.js"></script>
   <!-- Viewport Setup -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- Slick Image Slider -->
@@ -59,7 +61,19 @@
 </head>
 
 <body>
+
+  <!-- Slick Image Slider JS -->
+  <script type="text/javascript" src="slick/slick.min.js"></script>
+
+  <!-- Images loaded and Masonry -->
+  <script src="./js/imagesloaded.pkgd.js"></script>
+  <script src="./js/masonry.pkgd.min.js"></script>
+
   <script src="js/index.js"></script>
+
+  <!-- contentful read-only api -->
+  <script src="js/contentful.js"></script>
+
   <div class="background">
   </div>
   <div class="logobox">
@@ -89,13 +103,9 @@
 
   <div class="content portfolio">
     <div class="inner">
-      <script src="./js/masonry.pkgd.min.js"></script>
-      <script src="./js/imagesloaded.pkgd.js"></script>
       <div class="contentbox portfoliobox">
-        <div class="grid">
-          <div class="grid-sizer">
-
-          </div>
+        <div class="grid" id="pushgrid">
+          <div class="grid-sizer"></div>
           <!-- 7 -->
           <div class="grid-item">
             <a href="#Tekath"><img src="./images/vorschau/Tekath-Vorschau.png" /></a>
@@ -553,8 +563,6 @@
       Error
     </div>
   </div>
-  <!-- Slick Image Slider JS -->
-  <script type="text/javascript" src="slick/slick.min.js"></script>
 </body>
 
 </html>
