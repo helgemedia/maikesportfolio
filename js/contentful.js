@@ -5,7 +5,9 @@ var client = contentful.createClient({
   accessToken: '26d05aa38cc58832a0601357711fb33d124fa3582416f83016125b4661efa837'
 })
 
-var imagesDiv = document.getElementById('pushgrid')
+var imagesDiv = document.getElementById('pushgrid');
+var site = document.getElementsByTagName('body')[0];
+var projects = [];
 
 client.getEntries()
 .then(function (entries) {
@@ -16,15 +18,69 @@ client.getEntries()
       var previewImageDiv = document.createElement("div");
       var previewImageLink = document.createElement("a");
       var previewImageFile = document.createElement("img");
+      var projectTag = entry.fields.title.replace(/\s/g, '');
 
       previewImageFile.src = previewImageUrl;
-      previewImageLink.href = "#Placeholder";
+      previewImageLink.href = "#" + projectTag;
       previewImageDiv.setAttribute("class", "grid-item");
-      previewImageDiv.setAttribute("id", entry.sys.id);
+      previewImageDiv.setAttribute("id", projectTag);
       previewImageLink.appendChild(previewImageFile);
       previewImageDiv.appendChild(previewImageLink);
       $('.grid').append(previewImageDiv).masonry('appended', previewImageDiv);
+
+      var projectDiv = document.createElement("div");
+      var innerDiv = document.createElement("div");
+      var contentbox = document.createElement("div");
+      var textbox = document.createElement("div");
+      var picturebox = document.createElement("div");
+      var titlefield = document.createElement("h3");
+      var description = document.createElement("p");
+      var linkfield = document.createElement("a");
+      var backlink = document.createElement("a");
+
+      entry.fields.images.forEach( function(image) {
+        var imagediv = document.createElement("div");
+        var imageElement = document.createElement("img");
+        var ImageUrl = 'https://' + image.fields.file.url;
+
+        imageElement.src = ImageUrl;
+        imagediv.classList.add("slide");
+
+        imagediv.appendChild(imageElement);
+        picturebox.appendChild(imagediv);
+      });
+
+      titlefield.innerHTML = entry.fields.title;
+      description.innerHTML = entry.fields.description;
+      linkfield.innerHTML = entry.fields.linktext;
+      linkfield.setAttribute("href", entry.fields.link);
+      linkfield.setAttribute("target", "_blank");
+      backlink.setAttribute("href", "#Portfolio");
+      backlink.innerHTML = '<br><br>Zurück<br><br>';
+      projectDiv.classList.add("content", projectTag);
+      innerDiv.classList.add("inner");
+      contentbox.classList.add("contentbox", "projectbox");
+      textbox.classList.add("textbox");
+      picturebox.classList.add("picturebox", "p-" + projectTag)
+
+      textbox.appendChild(titlefield);
+      textbox.appendChild(description);
+      if(entry.fields.link) {
+        textbox.appendChild(linkfield);
+      }
+      textbox.appendChild(backlink);
+      contentbox.appendChild(textbox);
+      contentbox.appendChild(picturebox);
+      innerDiv.appendChild(contentbox);
+      projectDiv.appendChild(innerDiv);
+      site.appendChild(projectDiv);
+
+      var projectString = '.' + projectTag;
+      projects.push(projectTag);
+      sitemap['#' + projectTag] = function() { $(projectString).addClass('visible');}
+
       console.log(entry);
+      console.log(sitemap);
     }
   })
 })

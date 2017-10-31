@@ -1,3 +1,23 @@
+// Sitemap and associated loading functions
+
+var sitemap = {
+  '': function() {
+    $('.portfolio').addClass('visible');
+  },
+  '#Portfolio': function() {
+    $('.portfolio').addClass('visible');
+  },
+  '#About': function() {
+    $('.about').addClass('visible');
+  },
+  '#Kontakt': function() {
+    $('.kontakt').addClass('visible');
+  },
+  '#Impressum': function() {
+    $('.impressum').addClass('visible');
+  }
+};
+
 $('document').ready(function() {
 
   // Logo and Background Animation
@@ -38,55 +58,6 @@ $('document').ready(function() {
     // Hide whatever page is currently shown.
     $('.content').removeClass('visible');
 
-    // Sitemap and associated loading functions
-
-    var sitemap = {
-      '': function() {
-        $('.portfolio').addClass('visible');
-      },
-      '#Portfolio': function() {
-        $('.portfolio').addClass('visible');
-      },
-      '#About': function() {
-        $('.about').addClass('visible');
-      },
-      '#Kontakt': function() {
-        $('.kontakt').addClass('visible');
-      },
-      '#Impressum': function() {
-        $('.impressum').addClass('visible');
-      },
-
-      //7
-      '#Tekath': function() {
-        $('.tekath').addClass('visible');
-      },
-      //6
-      '#Fidena': function() {
-        $('.fidena').addClass('visible');
-      },
-      //5
-      '#Radierung': function() {
-        $('.radierung').addClass('visible');
-      },
-      //4
-      '#Oszillation': function() {
-        $('.oszillation').addClass('visible');
-      },
-      //3
-      '#Siebdruck': function() {
-        $('.siebdruck').addClass('visible');
-      },
-      //2
-      '#Titus': function() {
-        $('.titus').addClass('visible');
-      },
-      //1
-      '#DAV': function() {
-        $('.dav').addClass('visible');
-      }
-    };
-
     // Execute the relevant function based on the hash stored in temp.
     if (sitemap[temp]) {
       sitemap[temp]();
@@ -96,43 +67,6 @@ $('document').ready(function() {
       $('.errorpage').addClass('visible');
     }
   }
-
-  // Slick Image Slider Initialization
-  $(".picturebox").slick({
-    dots: true,
-    arrows: false,
-    adaptiveHeight: true,
-    fade: true
-  });
-
-  $('.p-one').on('click', function() {
-    $('.p-one').slick('slickNext');
-  });
-
-  $('.p-two').on('click', function() {
-    $('.p-two').slick('slickNext');
-  });
-
-  $('.p-three').on('click', function() {
-    $('.p-three').slick('slickNext');
-  });
-
-  $('.p-four').on('click', function() {
-    $('.p-four').slick('slickNext');
-  });
-
-  $('.p-five').on('click', function() {
-    $('.p-five').slick('slickNext');
-  });
-
-  $('.p-six').on('click', function() {
-    $('.p-six').slick('slickNext');
-  });
-
-  $('.p-seven').on('click', function() {
-    $('.p-seven').slick('slickNext');
-  });
-
 });
 
 /* Toggle between adding and removing the "responsive" class to #mainmenu on click */
@@ -165,4 +99,18 @@ $('.grid').imagesLoaded( function() {
 
 $(window).load(function(){
   $('.grid').masonry();
+  // Slick Image Slider Initialization
+  $(".picturebox").slick({
+    dots: true,
+    arrows: false,
+    adaptiveHeight: true,
+    fade: true
+  });
+  // Slick slider next picture onclick event listener
+  projects.forEach(function(project) {
+    var projectImage = ".p-" + project;
+    $(projectImage).on('click', function() {
+      $(projectImage).slick('slickNext');
+    });
+  });
 });
