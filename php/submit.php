@@ -4,7 +4,7 @@
 if(isset($_POST['url']) && $_POST['url'] == ''){
 
 	// email address here
-	$youremail = 'maike@iammai.de';
+	$youremail = 'maike.weckenbrock@yahoo.de';
 
 	// prepare an ordered version of the message
 	$body = "This is the form that was just submitted:
