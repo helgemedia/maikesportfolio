@@ -20,6 +20,8 @@ var sitemap = {
 
 $('document').ready(function() {
 
+  initMasonry();
+
   // Logo and Background Animation
   $('.logo, .logobox, .background, .menubox').on('click', function() {
     $('.background').addClass('animated');
@@ -88,24 +90,32 @@ var first = "maike";
 var last = "iammai.de";
 
 // Masonry Initialization
-$('.grid').imagesLoaded( function() {
-  $('.grid').masonry({
-    // options
-    itemSelector: '.grid-item',
-    columnWidth: '.grid-sizer',
-    percentPosition: true
+function initMasonry() {
+  var $grid = $('.grid');
+  $grid.imagesLoaded( function() {
+    $grid.masonry({
+      // options
+      itemSelector: '.grid-item',
+      columnWidth: '.grid-sizer',
+      percentPosition: true
+    });
   });
-});
 
-$(window).load(function(){
-  $('.grid').masonry();
+  $(window).load(function () {
+    $grid.masonry();
+  })
+}
+
+function initSlick() {
   // Slick Image Slider Initialization
-  $(".picturebox").slick({
+  var $picturebox = $(".picturebox")
+  $picturebox.slick({
     dots: true,
     arrows: false,
     adaptiveHeight: true,
     fade: true
   });
+
   // Slick slider next picture onclick event listener
   projects.forEach(function(project) {
     var projectImage = ".p-" + project;
@@ -113,4 +123,8 @@ $(window).load(function(){
       $(projectImage).slick('slickNext');
     });
   });
+}
+
+$(window).load(function () {
+  initSlick();
 });

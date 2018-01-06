@@ -78,9 +78,6 @@ client.getEntries()
       var projectString = '.' + projectTag;
       projects.push(projectTag);
       sitemap['#' + projectTag] = function() { $(projectString).addClass('visible');}
-
-      console.log(entry);
-      console.log(sitemap);
     }
   })
 })
