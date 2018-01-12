@@ -20,8 +20,6 @@ var sitemap = {
 
 $('document').ready(function() {
 
-  initMasonry();
-
   // Logo and Background Animation
   $('.logo, .logobox, .background, .menubox').on('click', function() {
     $('.background').addClass('animated');
@@ -90,24 +88,17 @@ var first = "maike";
 var last = "iammai.de";
 
 // Masonry Initialization
+var grid = $('.grid');
+
+initMasonry();
+
 function initMasonry() {
-  var grid = $('.grid');
-  grid.imagesLoaded( function() {
-    grid.masonry({
-      // options
-      itemSelector: '.grid-item',
-      columnWidth: '.grid-sizer',
-      percentPosition: true
-    });
+  grid.masonry({
+    // options
+    itemSelector: '.grid-item',
+    columnWidth: '.grid-sizer',
+    percentPosition: true
   });
-
-  $(window).load(function () {
-    setTimeout(loadMasonry(), 500);
-  })
-
-  function loadMasonry() {
-    grid.masonry();
-  }
 }
 
 function initSlick() {
@@ -129,6 +120,8 @@ function initSlick() {
   });
 }
 
-$(window).load(function () {
-  setTimeout(initSlick(), 500);
-});
+$(window).on('load', function() {
+  grid = $('.grid');
+  grid.masonry();
+  initSlick();
+})

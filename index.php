@@ -69,7 +69,7 @@
   <script src="./js/imagesloaded.pkgd.js"></script>
   <script src="./js/masonry.pkgd.min.js"></script>
 
-  <script src="js/index.js"></script>
+  <script src="js/index.js?random=<?php echo uniqid(); ?>"></script>
 
   <!-- contentful read-only api -->
   <script src="js/contentful.js"></script>

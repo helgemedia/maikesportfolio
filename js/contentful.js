@@ -26,7 +26,7 @@ client.getEntries()
       previewImageDiv.setAttribute("id", projectTag);
       previewImageLink.appendChild(previewImageFile);
       previewImageDiv.appendChild(previewImageLink);
-      $('.grid').append(previewImageDiv).masonry('appended', previewImageDiv);
+      $('.grid').append(previewImageDiv);
 
       var projectDiv = document.createElement("div");
       var innerDiv = document.createElement("div");
