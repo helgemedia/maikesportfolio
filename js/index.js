@@ -91,9 +91,9 @@ var last = "iammai.de";
 
 // Masonry Initialization
 function initMasonry() {
-  var $grid = $('.grid');
-  $grid.imagesLoaded( function() {
-    $grid.masonry({
+  var grid = $('.grid');
+  grid.imagesLoaded( function() {
+    grid.masonry({
       // options
       itemSelector: '.grid-item',
       columnWidth: '.grid-sizer',
@@ -102,14 +102,18 @@ function initMasonry() {
   });
 
   $(window).load(function () {
-    $grid.masonry();
+    setTimeout(loadMasonry(), 500);
   })
+
+  function loadMasonry() {
+    grid.masonry();
+  }
 }
 
 function initSlick() {
   // Slick Image Slider Initialization
-  var $picturebox = $(".picturebox")
-  $picturebox.slick({
+  var picturebox = $(".picturebox")
+  picturebox.slick({
     dots: true,
     arrows: false,
     adaptiveHeight: true,
@@ -126,5 +130,5 @@ function initSlick() {
 }
 
 $(window).load(function () {
-  initSlick();
+  setTimeout(initSlick(), 500);
 });
