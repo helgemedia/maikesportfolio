@@ -121,7 +121,7 @@ function initSlick() {
 }
 
 $(window).on('load', function() {
+  initSlick();
   grid = $('.grid');
   grid.masonry();
-  initSlick();
 })
