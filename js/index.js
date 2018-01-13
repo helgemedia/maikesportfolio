@@ -87,22 +87,9 @@ function respMenu() {
 var first = "maike";
 var last = "iammai.de";
 
-// Masonry Initialization
-var grid = $('.grid');
-
-initMasonry();
-
-function initMasonry() {
-  grid.masonry({
-    // options
-    itemSelector: '.grid-item',
-    columnWidth: '.grid-sizer',
-    percentPosition: true
-  });
-}
+// Slick Image Slider Initialization
 
 function initSlick() {
-  // Slick Image Slider Initialization
   var picturebox = $(".picturebox")
   picturebox.slick({
     dots: true,
@@ -122,6 +109,4 @@ function initSlick() {
 
 $(window).on('load', function() {
   initSlick();
-  grid = $('.grid');
-  grid.masonry();
 })
